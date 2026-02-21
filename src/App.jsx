@@ -1,10 +1,13 @@
-import useState from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-
+import EligiblityResult from "./pages/EligiblityResult";
 export default function App() {
   return (
-    <>
-      <Home />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/eligibility-results" element={<EligiblityResult />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
